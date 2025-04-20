@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Instructions</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://use.typekit.net/ezf5eml.css">
+	</head>
+  <body>
+    <ul class="topnav">
+      <li>
+        <a class="no-outline" href="index.html">
+          <img src="images/logo.png" alt="Screenprinting from Scratch" class="logo">
+        </a>
+      </li>
+      <li class="right">
+        <a href="about.html">About</a>
+        <a href="instructions.html">Instructions</a>
+        <a href="resources.html">Resources</a>
+      </li>
+    </ul>
+    <div class="page-wrapper">
+      <section class="hero"> <!--for page heading-->
+        <h1>Your 6 step <em>DIY guide</em> to Screen printing</h1>
+        </section>
+          
+      <section class="section"> <!--container to keep file prep, materials and timer together-->
+        <div class="file-prep">
+          <h3>*File Preparation</h3>
+          <p>To prepare your design for screen printing, follow these steps:</p>
+          <ul>
+            <li>Design your artwork using high contrast graphics in either CMYK mode or convert it to grayscale. </li>
+            <li>Text should be converted to outlines to avoid font issues during printing. Vector files are ideal.</li>
+            <li>While designing keep in mind your selected screen in terms of its size and mesh count or vice versa.</li>
+            <li>If you're designing in raster format-for eg. using Procreate or photoshop, retain atleast 300DPI resolution.</li>
+            <li>Separate each layer of your artwork, save as individual files and convert to halftone as per screen.</li>
+            <li>Check the link attached below for a comprehensive guide on halftones.</li>
+            <li>Check your print settings, add registration marks, scale as per the sheets you are printing on.</li>
+            <li>Print the artwork on transparency such as acetate,vellum,etc. or on regualr paper which is oiled after. </li>
+          </ul>
+          <p><a href="https://www.screenprinting.com/blogs/news/a-crash-course-in-halftones-for-screen-printing">Comprehensive Guide to Halftones</a></p>
+        </div>
+          
+        <div class="materials">
+          <h3>Materials Required</h3>
+          <ul>
+            <li>Screen</li>
+            <li>Emulsion</li>
+            <li>Emulsion Scoop</li>
+            <li>Transparent sheets</li>
+            <li>Exposing unit</li>
+            <li>Sponge</li>
+            <li>Vacuum Table</li>
+            <li>Ink-prepped color</li>
+            <li>Off Contact Block</li>
+            <li>Spatula</li>
+            <li>Fabric or Paper</li>
+            <li>Squeegee</li>
+          </ul>
+          <br>
+          <br>
+          <br>
+          <br>
+          <h4>* Not sure where to find it?</h4>
+          <p>Check out the <a href="resources.html">resources page</a> for an interactive map of Toronto's stationery shops. Filtering options available based on affordability, sustainability and locally produced items!</p>
+          <!--Additional entrypoint for resources page-->
+        </div>
+
+        <!-- timer- help from my brother and demo -  Description- Countdown timer with Pause/Resume Start/Stop function
+                                                      Author- Mateusz Rybczonec, URL- https://stackoverflow.com/a/72673107-->
+        <div class="timer">
+          <label for="timerSelect"><h3>Timer:</h3></label>
+          <select id="timerSelect">
+            <option value="3600">Emulsion Drying Time</option>
+            <option value="90">Exposing Time</option>
+            <option value="900">Drying Time</option>
+          </select>
+
+          <!-- play, pause and reset buttons for timer-->
+          <p id="display">00:00:00</p>
+          <button onclick="startTimer()">Start</button>
+          <button onclick="pauseTimer()">Pause</button>
+          <button onclick="resetTimer()">Reset</button>
+        </div>
+      </section>
+    </div>
+
+      <!-- Gradient divider for starting process section-->
+    <div class="step-section">
+      <h3>*The process </h3>
+    </div>
+  
+    <div class="page-wrapper">
+      <div class="steps-container">
+        <div class="step">
+          <h3>Screen Selection and Coating</h3>
+          <p>Once the design file is prepared, the next step is to select a screen that has an appropriate mesh size for the artwork based on detail and type of print. For finer details, select a screen with a higher mesh count and similarly, for bold, less detailed and heavy prints, select a lower mesh count. Using an emulsion scoop, coat the screen with photo-sensitive emulsion in a darkroom or low-light environment to avoid premature exposion. Try to ensure an even coat that covers the majority of the screen and then leave to dry for atleast 45min-1hr - Use the timer to keep track! Keep caution to ensure it does not come in contact with water during this period. </p>
+          
+          <img src="images/Step 1.gif" alt="Step visual">
+        </div>
+    
+        <div class="step">
+          <h3>Step 2- Exposing the artwork</h3>
+          <p>Once the emulsion is dry, the artwork printed on transparency is placed on the exposure unit facing upwards and the screen is placed on top of it with its outer side faced down so that light is blocked by the artwork and does not pass through those areas of the screen, creating a stencil. Note that there are different exposing times depending on the transparencies with an average time of 1.5 min- Start timer!</p>
+      
+          <img src="images/Step 2.gif" alt="Step visual">
+        </div>
+
+        <div class="step">
+          <h3>Step 3- Washing out the stencil</h3>
+          <p>After the screen has been exposed, take it to the washing unit and wash it adding pressure using a sponge. Keep washing until light can be seen through the artwork.Do this until desired result is achieved, but do not overdo it as it might over-expose it and create ink bleeds while printing. Let the screen dry in front of a fan for 15 min (Use timer) or longer if required until there is no moisture on it so that it does not ruin your prints.</p>
+        
+          <img src="images/Step 3.gif" alt="Step visual">
+        </div>
+
+        <div class="step">
+          <h3>Step 4- Set up</h3>
+          <p>Once dry, tape up any areas of the screen that are not covered with emulsion outside of your artwork and tape off-contact blocks to the edges of the screen so that the screen does not come in contact with the printing surface until pressure is applied. Secure the screen on the vacuum printing table with hinge clamps. This is especially important for accurate registration or consistent prints. You may also tape registration tabs to printing surface for further accuracy in printing. If you are printing on a surface such as tshirts or tote bags, insert a cardboard inside it to prevent ink bleeds on the back side. Finally, gather all your materials, i.e. squeegee, wooden block to raise the screen between prints, small water tub with sponge and paper towels for cleanup, prepped ink mixture containers and a spatula- and get ready to print!</p>
+        
+          <img src="images/Step 4.gif" alt="Step visual">
+        </div>
+
+        <div class="step">
+          <h3>Step 5- Print</h3>
+          <p>Place your printing surface under the secured screen and tape it down with registration tabs for accuracy and pull down your screen, placing the wooden block under it to keep it off contact and pour ink around the top edge a little away from your artwork so that it does not spill through. With the screen still raised, flood it with one pass using the squeegee at a 45 degree angle with moderate and steady pressure. Remove the wooden block and similarly, do another pass with the squeegee and lift off the screen placing the block under it again. Flood the screen again but this time in reverse direction to prevent the ink from drying. Finally lift the screen all the way to reveal your print! Do as many prints as you'd like until the ink dries but consider doing test prints first on cheaper paper such as newsprint paper and make sure to work fast as the ink dries up quickly. You can slow this down using a retarded medium.</p>
+        
+          <img src="images/Step 5.gif" alt="Step visual">
+        </div>
+
+        <div class="step">
+          <h3>Step 6- Let It Dry + Clean Up and You're done!</h3>
+          <p>After you're done printing, place all the prints on a drying rack and let them dry for a while. Meanwhile, rinse the screen first so that the ink does not dry over it for long. If you wish to use it for another artwork at this point, spray it with emulsion remover, scrub it using a brush specifically designated for this purpose and wash it with a pressure washer or hose. Then, wash your squeegee and spatula, clean your pinting area and store your leftover ink for reuse if not dry. And you're done! Look over your beautiful prints which would have dried up by then :P </p>
+        
+          <img src="images/Step 6.gif" alt="Step visual">
+        </div>
+      </div>
+    </div>
+  
+    <footer>
+      <div class="footer-content">
+        <div class="footer-left">
+          <h5>Learn, Print, Create.</h5>
+        </div>
+        <div class="footer-center">
+          <h5><strong>Designer:</strong> Vidhi Khurana<br>
+          <strong>Contact:</strong> vidhikhurana18@gmail.com<br>
+          OCAD University</h5>
+        </div>
+        <div class="footer-right">
+          <h5>© 2025 Screenprinting from Scratch. All Rights Reserved.</h5>
+        </div>
+    </footer>
+    
+    <script>
+      // timer - help from my brother and demo -  Description- Countdown timer with Pause/Resume Start/Stop function, Author- Mateusz Rybczonec, URL- https://stackoverflow.com/a/72673107 
+      let countdown;
+      let remainingTime = 0;
+      let isPaused = false;
+    
+      function formatTime(seconds) {
+        const hrs = Math.floor(seconds / 3600);
+        const mins = Math.floor((seconds % 3600) / 60);
+        const secs = seconds % 60;
+        return `${hrs.toString().padStart(2, '0')}:${mins
+          .toString()
+          .padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+      }
+    
+      function startTimer() {
+        const select = document.getElementById('timerSelect');
+        if (!isPaused) {
+          remainingTime = parseInt(select.value);
+        }
+        clearInterval(countdown);
+        countdown = setInterval(() => {
+          if (remainingTime <= 0) {
+            clearInterval(countdown);
+            alert('Time\'s up!');
+          } else {
+            document.getElementById('display').textContent = formatTime(remainingTime);
+            remainingTime--;
+          }
+        }, 1000);
+        isPaused = false;
+      }
+    
+      function pauseTimer() {
+        clearInterval(countdown);
+        isPaused = true;
+      }
+    
+      function resetTimer() {
+        clearInterval(countdown);
+        remainingTime = 0;
+        document.getElementById('display').textContent = '00:00:00';
+        isPaused = false;
+      }
+
+    </script>
+  </body>
+</html>
+        
+        

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Resources</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://use.typekit.net/ezf5eml.css">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    </head>
+    <body>
+
+      <ul class="topnav">
+        <li>
+          <a class="no-outline" href="index.html">
+            <img src="images/logo.png" alt="Screenprinting from Scratch" class="logo">
+          </a>
+        </li>
+        <li class="right">
+          <a href="about.html">About</a>
+          <a href="instructions.html">Instructions</a>
+          <a href="resources.html">Resources</a>
+        </li>
+      </ul>
+
+      <div class="page-wrapper">
+          <h1>Screen Printing Supplies Map</h1>
+          <h2>This map highlights local art supply stores in Toronto that sell screen-printing supplies. Most of them offer student discounts as well! Click on the pins for links to their websites and directions.</h2>
+      </div>  
+
+      <!-- Map from leaflet- Description: Leaflet Quick Start Guide
+                             Author:Leaflet
+                             URL:https://leafletjs.com/examples/quick-start/*/-->
+      <div id="map"></div>
+
+      <footer>
+        <div class="footer-content">
+          <div class="footer-left">
+            <h5>Learn, Print, Create.</h5>
+          </div>
+          <div class="footer-center">
+            <h5><strong>Designer:</strong> Vidhi Khurana<br>
+            <strong>Contact:</strong> vidhikhurana18@gmail.com<br>
+            OCAD University</h5>
+          </div>
+          <div class="footer-right">
+            <h5>© 2025 Screenprinting from Scratch. All Rights Reserved.</h5>
+          </div>
+      </footer>
+
+    </body>
+    <!-- interactive map code from leaflet - Description: Leaflet Quick Start Guide
+                                             Author:Leaflet
+                                             URL:https://leafletjs.com/examples/quick-start/-->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin="">
+    </script>
+
+    <script>
+      var map = L.map('map', {
+      center: [43.691070, -79.455015], // Toronto coordinates
+      zoom: 10,
+      minZoom: 10, //so user sticks to Toronto and does not get lost in the entire world map
+    });
+
+      var marker = L.marker([43.6525245, -79.3908646]).addTo(map)
+      .bindPopup('<a href="https://www.abovegroundartsupplies.com/locations/?srsltid=AfmBOorXkqWjj2IkRgK37IpD8C6CUbiI_e1pQVjAoKZGT_vJFqqekMoR" target="_blank">Above Ground (McCaul St)</a>');// Above ground OCADU
+      var marker = L.marker([43.6655295, -79.4651061]).addTo(map)
+      .bindPopup('<a href="https://www.abovegroundartsupplies.com/locations/?srsltid=AfmBOorXkqWjj2IkRgK37IpD8C6CUbiI_e1pQVjAoKZGT_vJFqqekMoR" target="_blank">Above Ground (The Junction)</a>');// Above ground Dundas
+      var marker = L.marker([43.5163394, -79.6875849]).addTo(map)
+      .bindPopup('<a href="https://www.deserres.ca/" target="_blank">DeSerres (Oakville)</a>');// DeSerres Oakville
+      var marker = L.marker([43.6475651, -79.3964603]).addTo(map)
+      .bindPopup('<a href="https://www.deserres.ca/" target="_blank">DeSerres (Spadina)</a>');// DeSerres Spadina
+      var marker = L.marker([43.6833945, -79.3241057]).addTo(map)
+      .bindPopup('<a href="https://www.deserres.ca/" target="_blank">DeSerres (Danforth)</a>');// DeSerres Danforth
+      var marker = L.marker([43.7061660, -79.4022338]).addTo(map)
+      .bindPopup('<a href="https://www.deserres.ca/" target="_blank">DeSerres (Toronto Uptown)</a>');// DeSerres toronto uptown
+      var marker = L.marker([43.8560726, -79.4314467]).addTo(map)
+      .bindPopup('<a href="https://www.deserres.ca/" target="_blank">DeSerres (Richmond Hill)</a>');// DeSerres Richmond Hill
+      var marker = L.marker([43.6487829, -79.3909588]).addTo(map)
+      .bindPopup('<a href="https://locationsca.michaels.com/on/toronto/4936" target="_blank">Michaels (John St)</a>');// Michaels (John St)
+      var marker = L.marker([43.6726518, -79.4685102]).addTo(map)
+      .bindPopup('<a href="https://locationsca.michaels.com/on/toronto/3990" target="_blank">Michaels (Stockyards)</a>');// Michaels Stockyards
+      var marker = L.marker([43.7327748, -79.4530543]).addTo(map)
+      .bindPopup('<a href="https://locationsca.michaels.com/on/toronto/3990" target="_blank">Michaels (Smart Centres Downsview)</a>');// Michaels Smart Centres Downsview
+      var marker = L.marker([43.7327748, -79.4530543]).addTo(map)
+      .bindPopup('<a href="https://locationsca.michaels.com/on/toronto/3990" target="_blank">Michaels (Smart Centres Downsview)</a>');// Michaels Smart Centres Downsview
+      var marker = L.marker([43.6651791, -79.4104903]).addTo(map)
+      .bindPopup('<a href="https://midoco.ca/?srsltid=AfmBOoqQRuFjEjc4mosQUfkw1CWplDzkA1gih0V2gASEBqxwFAbbYukV" target="_blank">Midoco (Bloor St W)</a>');// Midoco (Bloor St W)
+      var marker = L.marker([43.6697337, -79.3018980]).addTo(map)
+      .bindPopup('<a href="https://midoco.ca/?srsltid=AfmBOoqQRuFjEjc4mosQUfkw1CWplDzkA1gih0V2gASEBqxwFAbbYukV" target="_blank">Midoco (Queen St E)</a>');// Midoco (Queen St E)
+      // Add OpenStreetMap tile layer
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+    </script>
+</html>

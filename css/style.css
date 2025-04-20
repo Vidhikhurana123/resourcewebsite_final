@@ -1,0 +1,581 @@
+*{scroll-behavior: smooth;}
+
+.relative { 
+     position: relative;
+} 
+
+body { 
+cursor: url('../images/ink_can.png'),auto; /*Custom Cursor designed on illustrator, tutorial from- https://www.freecodecamp.org/news/how-to-make-a-custom-mouse-cursor-with-css-and-javascript/ */    
+position: relative;
+margin: 0; 
+min-height: 100vh;
+background-color: #FDF7E8;
+height: 100vh; 
+}
+
+/* Container on every page for consistent margins throughout website */
+.page-wrapper {
+margin: 5% auto;
+max-width: 1200px;
+padding: 0 2rem;
+}
+
+/* Typography */
+    @media (max-width: 400px) { /* Mobile responsiveness */
+        /*h1 for main page headings*/
+        h1 {
+            font-size: 2rem;
+            font-family:"instrument-serif", sans-serif;
+            font-weight: lighter;
+            color: #F15842;
+        }
+    }
+
+    @media (min-width:401px) { 
+        h1 {
+            font-size: 4.62rem;
+            font-family:"instrument-serif", sans-serif;
+            font-weight: lighter;
+            color: #F15842;
+            line-height: 4.62rem;
+        }
+    }
+    /*h2 for call to action lines on homepage and resources page, slighlty bigger than body text*/
+    @media (max-width: 600px) { /* Between mobile and desktop */
+        h2 {font-family: "franklin-gothic-compressed", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1rem;
+            width: 50%;
+    }
+
+    /*h5 for footnotes, footer*/
+        h5 {font-family: "franklin-gothic-compressed", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 0.65rem;
+            width: 40%; 
+            line-height: 1.5em;
+            margin-bottom: 0;
+        }
+    }
+
+    @media (min-width:601px) { /* Desktop view*/
+
+        h2 {font-family: "franklin-gothic-compressed", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1.4rem;
+    }
+
+        h5 {font-family: "franklin-gothic-compressed", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 0.85rem;
+            width: 40%;
+            line-height: 1.5em;
+        }
+    }
+
+    /* h3 used in subheadings such as File prep, steps, info cards, etc.*/
+    h3{
+        font-family: "franklin-gothic-compressed", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+        color: #2C3D73;
+        width: 100%;
+    }
+
+    /* h4 used in smaller subheadings used in timeline, note in materials required*/
+    h4 {
+    color: #2C3D73;
+    font-family: "franklin-gothic-compressed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.125rem;
+    width: 100%;
+    }
+
+    /* body text*/
+    p {
+        font-family: "franklin-gothic-compressed", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.125rem;
+    }
+
+    /* styling for vertical lists */
+    .file-prep li, .materials li, .info-card li { 
+        font-family: "franklin-gothic-compressed", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.125rem;
+    }
+
+/* Buttons styled similar to nav bar logo but with only stroke and not solid fill*/
+    button {
+        position: relative;
+        font-family:"franklin-gothic-extra-compre", sans-serif;;
+        font-size: 1.125rem;
+        font-weight: 600;			
+        font-style: normal;
+        background-color: transparent;
+        color: #FFD372;
+        text-decoration: none;
+        text-shadow: /*Text outline stroke created using this demo- https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow*/
+        1px 1px 0px hsl(8, 86%, 60%), 
+        -1px -1px 0px #F15842, 
+        1px -1px 0px #F15842, 
+        -1px 1px 0px #F15842; 
+        width: 130px;  /* Ellipse shape button demo from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_round_buttons */
+        height: 35px;  
+        border: 2px solid #F15842; /* Stroke thickness */
+        border-radius: 50%; 
+    }
+        
+    button:hover {
+        background-color: #F15842; /*solid fill on hover*/
+    }
+
+/* Navigation bar styling */
+    ul {list-style-type: none;
+        margin: 0;
+        padding: 0;
+        }
+
+    ul.topnav {
+        z-index: 999; /* so that navbar does not go under any element */
+        position: sticky;/* to have navbar accessible while scrolling*/
+        top: 0;
+        overflow: hidden;
+        background-color: #B3CF8C;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #FFD372; /* line to visually seperate navbar from page content*/
+        }
+            
+    .logo { /*Navigation link for homepage*/
+        min-width: 100px;
+        width: 10vw;
+        height: auto;
+    }
+        
+    .logo:hover {
+        transform: scale(1.1); /*to add a pop up element to logo*/
+    }
+        
+    /*Container for navigation except logo*/
+    ul.topnav li.right { 
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding-right: 30px;
+    }
+        
+    ul.topnav li a {
+        display: block;
+        color: #FFD372;
+        text-align: left;
+        padding: 17px 30px;
+        text-decoration: none;
+        position: relative;
+        font-family: "franklin-gothic-extra-compre", sans-serif;
+        font-size: 1.87rem;
+        font-weight: 600;
+        text-shadow: 
+            2px 2px 0px hsl(8, 86%, 60%),
+            -2px -2px 0px #F15842,
+            2px -2px 0px #F15842,
+            -2px 2px 0px #F15842;
+    }
+        
+    /*Hover effect for navigation links*/
+    ul.topnav li a::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 90px;
+        height: 35px;
+        border: 2px solid #F15842;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    ul.topnav li a:hover::after {
+        opacity: 1; /*To make the ring visble on hover*/
+    }
+
+    ul.topnav li a.no-outline::after {
+        display: none;
+    }
+
+    /* Responsive Navigation */
+    @media screen and (max-width: 600px) {
+        ul.topnav {
+            padding: 10px;
+        }
+
+        ul.topnav li.right {
+            gap: 10px;
+            padding-right: 10px;
+        }
+
+        ul.topnav li a {
+            font-size: calc(1.87rem * 0.6); /* 60% of original size */
+            padding: 10px 15px;
+        }
+
+        ul.topnav li a::after {
+            width: 54px; 
+            height: 21px; 
+        }
+    }
+
+/* Footer styling */
+    footer {
+        background-color: #F4C75B; 
+        color: #2C3D73; 
+    }
+        
+    .footer-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 5px;
+        width: 90%; 
+        margin: 0 auto; 
+        position: relative; 
+    }
+
+    /* 3 columns of text for separation of content*/
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        white-space: nowrap;
+        position: relative; 
+    }
+
+    /* Adjustments for mobile responsiveness */
+    @media (max-width: 768px) {
+        .footer-content {
+            flex-direction: column; /* For stacking text on smaller screens*/
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 5px;
+            width: 90%; 
+            margin: 0 auto; 
+            position: relative; 
+        }
+        
+        .footer-left, .footer-center, .footer-right {
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            margin-left: 10px;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    }
+
+/* Homepage styling */
+    /* Background gradient */
+    .background {
+        background-image: url('../images/gradientt.png');
+        background-size: cover;   /* to ensure it is filling the screen */  
+        background-repeat: no-repeat;
+        position: fixed;   /* to keep it fixed in place */
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+    }
+
+    .homepage-wrapper { /* Conatiner for text and gif */
+        display: flex;       
+        justify-content: space-between; 
+        flex-wrap: wrap;          
+      }
+      
+      #homepage-gif {
+        flex: 1;
+        min-width: 325px;
+      }
+
+      #homepage-gif h2 {
+        width: 50%; /* To change margin constratints */
+      }
+
+      .gif-container {
+        flex: 1;
+        min-width: 250px;
+      }
+
+    .gif-container {
+        position: relative; /* Goes below text for smaller screens */
+        width: 100%;     
+        height: auto;        
+        display: flex;
+        justify-content: center;  
+        align-items: center;      
+        overflow: hidden;    
+    }
+
+    .gif {
+        width: 160%;
+        max-width: 160%;
+        height: auto;
+        display: block;
+    }
+
+    @media (max-width: 600px) {
+        .gif-container {
+        width: 90%;
+        }
+    
+        .gif {
+        width: 100%;
+        }
+    }
+
+/* About page styling */
+    .hero-image {
+        background-image: url("../images/matchbox_desi.png"); /* Screen printed Artwork made by me */
+        height: 450px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    @media (max-width: 600px) {
+        .hero-image {height: 200px;
+        }
+    }
+
+    .content-grid { /* To have info-cards and timeline in 1 row, 2:1 ratio */
+                    /* CSS Grid container demo from W3Schools- https://www.w3schools.com/css/css_grid_container.asp */
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 2rem;
+        flex-wrap: nowrap;
+    }
+
+    .info-cards { 
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns of info cards with 1 columnn timeline */
+        gap: 2rem;
+        flex: 2;
+    }
+
+    .info-card {
+        margin-bottom: 3rem;
+        position: relative;
+        background-color: #FDF7E8;
+        border: 2px solid #F15842;
+        max-width: 100%;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 10px 10px 4px rgba(0,0,0,0.05);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        
+    }
+
+    .info-card h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+        color: #2C3D73;
+        width: 100%; /* To remove width limit on headings */
+    }
+
+    .info-card p {
+        width: 100%; /* To remove width limit on paragraphs */
+        margin-bottom: 1rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 800px) {
+        .content-grid {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            gap: 1rem;
+            padding: 1rem;
+            margin: 4%;
+            }
+        .info-cards {
+            grid-template-columns: 1fr; /* Info cards switch to single column for smaller screens */
+            min-width: 40%;
+            gap: 1rem;
+            }
+        .timeline {
+            min-width: 38%;
+            padding-left: 0.6rem;
+            gap: 2rem;
+        }
+        }
+
+    /* Timeline */
+    /* Demo from W3schools- Description: How to create a vertical Timeline 
+                            Author:W3Schools
+                            URL: https://www.w3schools.com/howto/howto_css_timeline.asp */
+    .timeline { /* Container for timeline */
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 2rem;
+        align-self: start;
+        flex: 1;
+    }
+
+    .timeline-item { /* Timeline text */
+        position: relative;
+        padding-left: 2rem;
+        margin-bottom: 0;
+    }
+
+    .timeline-item::before { /* Timeline bullets */
+        content: '';
+        position: absolute;
+        left: 0.7rem;
+        top: 26%;
+        transform: translateY(-50%);
+        width: 12px;
+        height: 12px;
+        background-color: #F15842;
+        border-radius: 50%;
+    }
+
+    .timeline-item::after { /* Timeline line */
+        content: '';
+        position: absolute;
+        left: 1rem;
+        top: 25%;
+        width: 2px;
+        height: calc(100% + 2.8rem);
+        background-color: #F15842;
+    }
+
+    @media (max-width: 600px) {
+        .timeline-item::after {
+            height: calc(100% + 3.8rem); /* Timeline line length */
+    }}
+
+    .timeline-item:last-child::after { /* To end line at last bullet */
+        display: none;
+    }
+
+/* Instructions page styling */
+    .hero { /* For heading */
+        text-align: center;
+    }
+
+    .section { /* Container for file-prep, materials and timer to put them in 1 row in desktop view*/
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5em;
+        justify-content: space-around;
+    }
+
+    .file-prep { 
+        width: 50%;
+        border-radius: 10px;
+        margin-top: 0%;
+    }
+
+    .materials {
+        width: 25%;
+        background: #FFD372;
+        padding: 1em;
+        border-radius: 10px;
+        margin-top: 0%;
+    }
+
+    @media (max-width:800px) {
+        .materials {
+            column-count: 1; /* To put materials required and note in 1 column in small screens*/
+        }
+    }
+
+    @media (min-width:801px) {
+        .materials {
+            column-count: 2; /* To put materials required and note in separate columns in big screens*/
+            height: 40%;
+        }
+    }
+
+    /* timer - help from my brother and demo -  
+                        Description- Countdown timer with Pause/Resume Start/Stop function
+                        Author- Mateusz Rybczonec, URL- https://stackoverflow.com/a/72673107 */
+    .timer { 
+        margin-top: 0%;
+        width: 180px;
+        height: 359px;
+        background: #FFD372;
+        padding: 1em;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .timer select{
+        margin-top: 10px;
+        margin-right: 5px;
+        padding: 6px 12px;
+        font-size: 14px;
+        border: none;
+        border-radius: 5px;
+        background-color: #FDF7E8;
+        cursor: pointer;
+    }
+
+    /* Steps styled similar to info-cards*/
+    .step-section {
+        background: linear-gradient(to right, #e06648, #fddbb7);
+        text-align: center;
+        }
+
+    .step {
+        border: 2px solid #F15842;
+        box-shadow: 10px 10px 4px rgba(0,0,0,0.05);
+        padding: 1em;
+        border-radius: 10px;
+        width: 43%;
+        margin: 1em;
+    }
+
+    @media (max-width:1035px) { /* Steps change to single column for smaller screens*/
+        .step {
+            width: 85%;
+        }
+    }
+
+    .step img { /* Individual gifs created for each step placed inside step cards*/
+        max-width: 100%;
+        border: 2px;
+    }
+
+    .steps-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+/* Resources page styling */
+    /* Map from leaflet- Description: Leaflet Quick Start Guide
+                     Author:Leaflet
+                     URL:https://leafletjs.com/examples/quick-start/*/
+    #map { height: 70%;} 
