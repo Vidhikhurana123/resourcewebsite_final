@@ -168,8 +168,9 @@
           .padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
       }
     
+      //to start or redsume timer
       function startTimer() {
-        const select = document.getElementById('timerSelect');
+        const select = document.getElementById('timerSelect'); //set dropdown filter value for timer
         if (!isPaused) {
           remainingTime = parseInt(select.value);
         }
@@ -177,7 +178,7 @@
         countdown = setInterval(() => {
           if (remainingTime <= 0) {
             clearInterval(countdown);
-            alert('Time\'s up!');
+            alert('Time\'s up!'); //send an alert when time is up
           } else {
             document.getElementById('display').textContent = formatTime(remainingTime);
             remainingTime--;
@@ -187,13 +188,13 @@
       }
     
       function pauseTimer() {
-        clearInterval(countdown);
+        clearInterval(countdown); //pauses the interval
         isPaused = true;
       }
     
       function resetTimer() {
         clearInterval(countdown);
-        remainingTime = 0;
+        remainingTime = 0; //reset timer back to 0
         document.getElementById('display').textContent = '00:00:00';
         isPaused = false;
       }
